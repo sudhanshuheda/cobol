@@ -1,0 +1,176 @@
+2024-08-22 20:17:10.644126|22763|dat_bu_ec2_dev|INFO|Started : Data prep End to End Process job
+2024-08-22 20:17:10.654795|22763|dat_bu_ec2_dev|INFO|Started : Data prep Pre process job
+2024-08-22 20:17:10.674947|22763|dat_bu_ec2_dev|INFO|Started : Pre Processing of data prep job
+2024-08-22 20:17:10.682779|22763|dat_bu_ec2_dev|INFO|Fetching input file S3 bucket uri info /data_prep/CXTT.DBBAQL1.BT000000.TBDT0101
+2024-08-22 20:17:10.690083|22763|dat_bu_ec2_dev|INFO|Searching for Input File : aws s3 ls s3://expn-na-cis-dat-bu-nonprod-us-east-1/data_prep/DBBAQ/ --recursive | grep CXTT.DBBAQL1.BT000000.TBDT0101$ | cut -c 32-
+2024-08-22 20:17:11.389877|22763|dat_bu_ec2_dev|INFO|Successfully got S3 bucket info of input file s3://expn-na-cis-dat-bu-nonprod-us-east-1/data_prep/DBBAQ/BT058024/L1
+2024-08-22 20:17:12.078660|22763|dat_bu_ec2_dev|INFO|Copying Input and ENVSYMBL files from S3 bucket
+2024-08-22 20:17:13.893592|22763|dat_bu_ec2_dev|INFO|Successfully copied input files from s3://expn-na-cis-dat-bu-nonprod-us-east-1/data_prep/DBBAQ/BT058024/L1
+2024-08-22 20:17:13.902452|22763|dat_bu_ec2_dev|INFO|Started : Unzipping of input files
+2024-08-22 20:17:13.934343|22763|dat_bu_ec2_dev|INFO|Completed : Unzipping of input files completed successfully
+2024-08-22 20:17:13.942174|22763|dat_bu_ec2_dev|INFO|Started binary to ascii conversion for input file : /mnt/efs/c18852e/new_backup_folder3/dataprep_run/run-22Aug2024_201710635462252/input_files/CXTT.CCSS.SMART.B240227.C061855.D283953(ENVSYMBL)  
+2024-08-22 20:17:13.951038|22763|dat_bu_ec2_dev|INFO|/usr/lib/jvm/java-17-amazon-corretto.x86_64/bin/java -jar /mnt/efs/c18852e/new_backup_folder3/dataprep_run/bin/dataprep-converters-runnable-2.75.0-RELEASE.jar ASCII /mnt/efs/c18852e/new_backup_folder3/dataprep_run/run-22Aug2024_201710635462252/input_files/CXTT.CCSS.SMART.B240227.C061855.D283953(ENVSYMBL) /mnt/efs/c18852e/new_backup_folder3/dataprep_run/run-22Aug2024_201710635462252/input_files/params_mf.txt
+2024-08-22 20:17:22.203642|22763|dat_bu_ec2_dev|INFO|Completed Binary to ascii conversion Input File : /mnt/efs/c18852e/new_backup_folder3/dataprep_run/run-22Aug2024_201710635462252/input_files/CXTT.CCSS.SMART.B240227.C061855.D283953(ENVSYMBL)   Output File : /mnt/efs/c18852e/new_backup_folder3/dataprep_run/run-22Aug2024_201710635462252/input_files/params_mf.txt
+2024-08-22 20:17:22.211553|22763|dat_bu_ec2_dev|INFO|Started input file binary to ascii conversion
+/usr/lib/jvm/java-17-amazon-corretto.x86_64/bin/java -jar /mnt/efs/c18852e/new_backup_folder3/dataprep_run/bin/dataprep-preprocessor-2.75.0-RELEASE.jar /mnt/efs/c18852e/new_backup_folder3/dataprep_run/run-22Aug2024_201710635462252/input_files/CXTT.DBBAQL1.BT000000.TBDT0101 /mnt/efs/c18852e/new_backup_folder3/dataprep_run/run-22Aug2024_201710635462252/input_files/CXTT.DBBAQL1.BT000000.TBDT0101.txt --log.level=INFO --log.file.size=1000MB --spring.profiles.active=non-prod --spring.config.location=/mnt/efs/c18852e/new_backup_folder3/dataprep_run/config/ --spring.config.additional-location=file:/mnt/efs/c18852e/new_backup_folder3/dataprep_run/config//preprocessor-application-non-prod.yml --rundir=/mnt/efs/c18852e/new_backup_folder3/dataprep_run/run-22Aug2024_201710635462252
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+ :: Spring Boot ::                (v3.1.1)
+
+2024-08-22 20:17:36.00373|23853|dat_bu_ec2_dev|INFO|[main] StartupInfoLogger.java:51 - data-prep - Starting DataprepPreprocessorApplication v2.75.0-RELEASE using Java 17.0.12 with PID 23853 (/mnt/efs/c18852e/new_backup_folder3/dataprep_run/bin/dataprep-preprocessor-2.75.0-RELEASE.jar started by c18852e in /mnt/efs/c18852e/new_backup_folder3/dataprep_run/scripts)
+2024-08-22 20:17:36.00378|23853|dat_bu_ec2_dev|INFO|[main] SpringApplication.java:640 - data-prep - The following 1 profile is active: "non-prod"
+2024-08-22 20:17:42.00635|23853|dat_bu_ec2_dev|INFO|[main] StartupInfoLogger.java:57 - data-prep - Started DataprepPreprocessorApplication in 8.674 seconds (process running for 19.879)
+2024-08-22 20:17:43.00006|23853|dat_bu_ec2_dev|INFO|[main] DataprepPreprocessorApplication.java:93 - data-prep - main() : Job started 
+2024-08-22 20:17:43.00029|23853|dat_bu_ec2_dev|WARN|[pool-2-thread-1] DataPreProcessing426FB.java:53 - data-prep - Empty row found after trailer.
+2024-08-22 20:17:43.00045|23853|dat_bu_ec2_dev|INFO|[main] DataprepPreprocessorApplication.java:115 - data-prep - main() : Job Report:
+===========
+Name: DataPreprocessorJob
+Status: COMPLETED
+Parameters:
+	Batch size = 1,000
+	Error threshold = N/A
+	Jmx monitoring = false
+	Batch scanning = false
+Metrics:
+	Start time = 2024-08-22T20:17:43.007822901
+	End time = 2024-08-22T20:17:43.035749611
+	Duration = 27ms
+	Read count = 15
+	Write count = 15
+	Filter count = 0
+	Error count = 0
+2024-08-22 20:17:43.663896|22763|dat_bu_ec2_dev|INFO|Input Binary file successfully converted to Ascii /mnt/efs/c18852e/new_backup_folder3/dataprep_run/run-22Aug2024_201710635462252/input_files/CXTT.DBBAQL1.BT000000.TBDT0101
+2024-08-22 20:17:43.671610|22763|dat_bu_ec2_dev|INFO|Completed input file binary to ascii conversion /mnt/efs/c18852e/new_backup_folder3/dataprep_run/run-22Aug2024_201710635462252/input_files/CXTT.DBBAQL1.BT000000.TBDT0101
+2024-08-22 20:17:43.680209|22763|dat_bu_ec2_dev|INFO|Completed : Pre Processing of data prep job
+2024-08-22 20:17:43.692423|22763|dat_bu_ec2_dev|INFO|Ascii input file name for processing is :CXTT.DBBAQL1.BT000000.TBDT0101.txt
+2024-08-22 20:17:43.715122|22763|dat_bu_ec2_dev|INFO|Completed : Data prep Pre process job
+2024-08-22 20:17:43.725857|22763|dat_bu_ec2_dev|INFO|Ascii input file name for processing is :CXTT.DBBAQL1.BT000000.TBDT0101.txt
+2024-08-22 20:17:43.733760|22763|dat_bu_ec2_dev|INFO|Started : Data prep Record Process job
+2024-08-22 20:17:43.744526|22763|dat_bu_ec2_dev|INFO|Ascii input file name for processing is :CXTT.DBBAQL1.BT000000.TBDT0101.txt
+2024-08-22 20:17:43.761629|22763|dat_bu_ec2_dev|INFO|Started : Processing of data prep job
+2024-08-22 20:17:43.771253|22763|dat_bu_ec2_dev|INFO|params_mf.txt file loaded successfully
+2024-08-22 20:17:43.780554|22763|dat_bu_ec2_dev|INFO|Running data-prep with inputfile=/mnt/efs/c18852e/new_backup_folder3/dataprep_run/run-22Aug2024_201710635462252/input_files/CXTT.DBBAQL1.BT000000.TBDT0101.txt vin=BBAQ db=BT058024 type=L activity code=2 id=1 activity date=022724 recycle switch=N
+/usr/lib/jvm/java-17-amazon-corretto.x86_64/bin/java -jar -Xms2G -Xmx6G /mnt/efs/c18852e/new_backup_folder3/dataprep_run/bin/dataprep-core-2.75.0-RELEASE.jar /mnt/efs/c18852e/new_backup_folder3/dataprep_run/run-22Aug2024_201710635462252/input_files/CXTT.DBBAQL1.BT000000.TBDT0101.txt BBAQ L 2 BT058024 1 022724 N --log.level=INFO --log.file.size=1000MB --rundir=/mnt/efs/c18852e/new_backup_folder3/dataprep_run/run-22Aug2024_201710635462252 --port=9091 --spring.profiles.active=non-prod --spring.config.location=/mnt/efs/c18852e/new_backup_folder3/dataprep_run/config/ --spring.config.additional-location=file:/mnt/efs/c18852e/new_backup_folder3/dataprep_run/config//application-non-prod.yml
+   ____   ___   ____      ____            _                     ____                           ______
+  / ___| |_ _| / ___|    |  _ \    __ _  | |_    __ _          |  _ \   _ __    ___   _ __     \ \ \ \
+ | |      | |  \___ \    | | | |  / _` | | __|  / _` |  _____  | |_) | | '__|  / _ \ | '_ \     \ \ \ \
+ | |___   | |   ___) |   | |_| | | (_| | | |_  | (_| | |_____| |  __/  | |    |  __/ | |_) |    / / / /
+  \____| |___| |____/    |____/   \__,_|  \__|  \__,_|         |_|     |_|     \___| | .__/    /_/_/_/
+                                                                                     |_|
+  (v0.0.1)
+
+2024-08-22 20:18:01.00194|25759|dat_bu_ec2_dev|INFO|[main] StartupInfoLogger.java:51 - data-prep - Starting DataPrepSingleFileApplication v2.75.0-RELEASE using Java 17.0.12 with PID 25759 (/mnt/efs/c18852e/new_backup_folder3/dataprep_run/bin/dataprep-core-2.75.0-RELEASE.jar started by c18852e in /mnt/efs/c18852e/new_backup_folder3/dataprep_run/scripts)
+2024-08-22 20:18:01.00199|25759|dat_bu_ec2_dev|INFO|[main] SpringApplication.java:640 - data-prep - The following 1 profile is active: "non-prod"
+2024-08-22 20:18:09.00829|25759|dat_bu_ec2_dev|INFO|[main] StartupInfoLogger.java:57 - data-prep - Started DataPrepSingleFileApplication in 11.391 seconds (process running for 25.422)
+2024-08-22 20:18:11.00396|25759|dat_bu_ec2_dev|WARN|[main] CsmtvDckService.java:258 - data-prep - getDataFromTB11EditWithEditValue() : No data to fetch from TBL11_DATA_EDIT with vin = BBAQ AND runtype = L AND activitycode = 2 AND dataedittype= O
+2024-08-22 20:18:11.00400|25759|dat_bu_ec2_dev|WARN|[main] CsmtvDckService.java:258 - data-prep - getDataFromTB11EditWithEditValue() : No data to fetch from TBL11_DATA_EDIT with vin = BBAQ AND runtype = L AND activitycode = 2 AND dataedittype= S
+2024-08-22 20:18:11.00514|25759|dat_bu_ec2_dev|INFO|[main] JobFactory.java:37 - data-prep - main() : Job started 
+2024-08-22 20:18:11.00960|25759|dat_bu_ec2_dev|INFO|[pool-16-thread-1] Metro2RecordProcessor.java:34 - data-prep - processRecord() : Processed 15 records.
+2024-08-22 20:18:12.00133|25759|dat_bu_ec2_dev|INFO|[main] SingleDataprepJob.java:32 - data-prep - main() : Job Report:
+===========
+Name: DataPrepJob
+Status: COMPLETED
+Parameters:
+	Batch size = 1,000
+	Error threshold = N/A
+	Jmx monitoring = false
+	Batch scanning = false
+Metrics:
+	Start time = 2024-08-22T20:18:11.662554348
+	End time = 2024-08-22T20:18:12.125619714
+	Duration = 463ms
+	Read count = 15
+	Write count = 15
+	Filter count = 0
+	Error count = 0
+2024-08-22 20:18:14.377574|22763|dat_bu_ec2_dev|INFO|Completed : Processing of data prep job
+2024-08-22 20:18:14.393271|22763|dat_bu_ec2_dev|INFO|Completed : Data prep Record Process job
+2024-08-22 20:18:14.406377|22763|dat_bu_ec2_dev|INFO|Started : Data prep Post Process job
+2024-08-22 20:18:15.317727|22763|dat_bu_ec2_dev|INFO|Started : Post Processing of data prep job
+2024-08-22 20:18:15.329985|22763|dat_bu_ec2_dev|INFO|Started pulling required Mainframe files from S3 bucket
+2024-08-22 20:18:15.337937|22763|dat_bu_ec2_dev|INFO|Copying dataprep_mf_output folder files from S3 bucket
+2024-08-22 20:18:15.344967|22763|dat_bu_ec2_dev|INFO|Search Criteria for MF file on S3 bucket: LA35TRAD.*BBAQL1.*BT058024
+2024-08-22 20:18:17.424815|22763|dat_bu_ec2_dev|INFO|Mainframe LA35TRAD output file name is : dataprep_mf_output/CXTT.LA35TRAD.DBBAQL1.BT058024.Z
+2024-08-22 20:18:18.113002|22763|dat_bu_ec2_dev|INFO|aws s3 cp s3://expn-na-cis-dat-bu-nonprod-us-east-1/dataprep_mf_output/CXTT.LA35TRAD.DBBAQL1.BT058024.Z /mnt/efs/c18852e/new_backup_folder3/dataprep_run/run-22Aug2024_201710635462252/dataprep_mf_output/
+2024-08-22 20:18:18.985722|22763|dat_bu_ec2_dev|INFO|Successfully downloaded Mainframe CXTT.LA35TRAD.DBBAQL1.BT058024.Z file to /mnt/efs/c18852e/new_backup_folder3/dataprep_run/run-22Aug2024_201710635462252/dataprep_mf_output
+2024-08-22 20:18:18.995811|22763|dat_bu_ec2_dev|INFO|Copying dataprep_mf_output folder files from S3 bucket
+2024-08-22 20:18:19.002828|22763|dat_bu_ec2_dev|INFO|Search Criteria for MF file on S3 bucket: DISC.*BBAQL1.*BT058024
+2024-08-22 20:18:21.142767|22763|dat_bu_ec2_dev|INFO|Mainframe DISC output file name is : dataprep_mf_output/CXTT.DISC.DBBAQL1.BT058024.Z
+2024-08-22 20:18:21.865464|22763|dat_bu_ec2_dev|INFO|aws s3 cp s3://expn-na-cis-dat-bu-nonprod-us-east-1/dataprep_mf_output/CXTT.DISC.DBBAQL1.BT058024.Z /mnt/efs/c18852e/new_backup_folder3/dataprep_run/run-22Aug2024_201710635462252/dataprep_mf_output/
+2024-08-22 20:18:22.813869|22763|dat_bu_ec2_dev|INFO|Successfully downloaded Mainframe CXTT.DISC.DBBAQL1.BT058024.Z file to /mnt/efs/c18852e/new_backup_folder3/dataprep_run/run-22Aug2024_201710635462252/dataprep_mf_output
+2024-08-22 20:18:22.823810|22763|dat_bu_ec2_dev|INFO|Copying dataprep_mf_output folder files from S3 bucket
+2024-08-22 20:18:22.834708|22763|dat_bu_ec2_dev|INFO|Search Criteria for MF file on S3 bucket: RECY.*BBAQL1.*BT058024
+2024-08-22 20:18:24.962203|22763|dat_bu_ec2_dev|INFO|Mainframe RECY output file name is : 
+2024-08-22 20:18:24.970203|22763|dat_bu_ec2_dev|ERROR|Error while finding path for Mainframe RECY file based on criteria : RECY.*BBAQL1.*BT058024
+2024-08-22 20:18:24.977674|22763|dat_bu_ec2_dev|INFO|Copying dataprep_mf_output folder files from S3 bucket
+2024-08-22 20:18:24.984974|22763|dat_bu_ec2_dev|INFO|Search Criteria for MF file on S3 bucket: FICH.CCSS.*BBAQL1.*BT058024
+2024-08-22 20:18:27.196022|22763|dat_bu_ec2_dev|INFO|Mainframe FICH.CCSS output file name is : dataprep_mf_output/CXTT.FICH.CCSS.DBBAQL1.BT058024.Z
+2024-08-22 20:18:27.872937|22763|dat_bu_ec2_dev|INFO|aws s3 cp s3://expn-na-cis-dat-bu-nonprod-us-east-1/dataprep_mf_output/CXTT.FICH.CCSS.DBBAQL1.BT058024.Z /mnt/efs/c18852e/new_backup_folder3/dataprep_run/run-22Aug2024_201710635462252/dataprep_mf_output/
+2024-08-22 20:18:28.766706|22763|dat_bu_ec2_dev|INFO|Successfully downloaded Mainframe CXTT.FICH.CCSS.DBBAQL1.BT058024.Z file to /mnt/efs/c18852e/new_backup_folder3/dataprep_run/run-22Aug2024_201710635462252/dataprep_mf_output
+2024-08-22 20:18:28.775566|22763|dat_bu_ec2_dev|INFO|Completed pulling required Mainframe files from S3 bucket
+2024-08-22 20:18:28.784407|22763|dat_bu_ec2_dev|INFO|Started comparing AWS and Mainframe files
+2024-08-22 20:18:28.815803|22763|dat_bu_ec2_dev|INFO|Started binary to ascii conversion for input file : /mnt/efs/c18852e/new_backup_folder3/dataprep_run/run-22Aug2024_201710635462252/dataprep_mf_output/CXTT.DISC.DBBAQL1.BT058024
+2024-08-22 20:18:28.823667|22763|dat_bu_ec2_dev|INFO|/usr/lib/jvm/java-17-amazon-corretto.x86_64/bin/java -jar /mnt/efs/c18852e/new_backup_folder3/dataprep_run/bin/dataprep-converters-runnable-2.75.0-RELEASE.jar DISCASCII /mnt/efs/c18852e/new_backup_folder3/dataprep_run/run-22Aug2024_201710635462252/dataprep_mf_output/CXTT.DISC.DBBAQL1.BT058024 /mnt/efs/c18852e/new_backup_folder3/dataprep_run/run-22Aug2024_201710635462252/dataprep_mf_output/CXTT.DISC.DBBAQL1.BT058024.txt
+2024-08-22 20:18:32.209129|22763|dat_bu_ec2_dev|INFO|Completed Binary to ascii conversion Input File : /mnt/efs/c18852e/new_backup_folder3/dataprep_run/run-22Aug2024_201710635462252/dataprep_mf_output/CXTT.DISC.DBBAQL1.BT058024 Output File : /mnt/efs/c18852e/new_backup_folder3/dataprep_run/run-22Aug2024_201710635462252/dataprep_mf_output/CXTT.DISC.DBBAQL1.BT058024.txt
+2024-08-22 20:18:32.221741|22763|dat_bu_ec2_dev|INFO|Comparing DISC files.
+2024-08-22 20:18:32.239311|22763|dat_bu_ec2_dev|INFO|AWS (CXTT.DISC.DBBAQL1.BT058024.bin) and Main Frame (CXTT.DISC.DBBAQL1.BT058024) files are IDENTICAL.
+2024-08-22 20:18:32.309175|22763|dat_bu_ec2_dev|INFO|Started binary to ascii conversion for input file : /mnt/efs/c18852e/new_backup_folder3/dataprep_run/run-22Aug2024_201710635462252/dataprep_mf_output/CXTT.LA35TRAD.DBBAQL1.BT058024
+2024-08-22 20:18:32.318503|22763|dat_bu_ec2_dev|INFO|/usr/lib/jvm/java-17-amazon-corretto.x86_64/bin/java -jar /mnt/efs/c18852e/new_backup_folder3/dataprep_run/bin/dataprep-converters-runnable-2.75.0-RELEASE.jar TRADASCII /mnt/efs/c18852e/new_backup_folder3/dataprep_run/run-22Aug2024_201710635462252/dataprep_mf_output/CXTT.LA35TRAD.DBBAQL1.BT058024 /mnt/efs/c18852e/new_backup_folder3/dataprep_run/run-22Aug2024_201710635462252/dataprep_mf_output/CXTT.LA35TRAD.DBBAQL1.BT058024.txt
+2024-08-22 20:18:34.846878|22763|dat_bu_ec2_dev|INFO|Completed Binary to ascii conversion Input File : /mnt/efs/c18852e/new_backup_folder3/dataprep_run/run-22Aug2024_201710635462252/dataprep_mf_output/CXTT.LA35TRAD.DBBAQL1.BT058024 Output File : /mnt/efs/c18852e/new_backup_folder3/dataprep_run/run-22Aug2024_201710635462252/dataprep_mf_output/CXTT.LA35TRAD.DBBAQL1.BT058024.txt
+2024-08-22 20:18:34.858502|22763|dat_bu_ec2_dev|INFO|Comparing LA35TRAD files.
+2024-08-22 20:18:34.875857|22763|dat_bu_ec2_dev|INFO|AWS (CXTT.LA35TRAD.DBBAQL1.BT058024.bin) and Main Frame (CXTT.LA35TRAD.DBBAQL1.BT058024) files are IDENTICAL.
+2024-08-22 20:18:34.889147|22763|dat_bu_ec2_dev|INFO|Completed AWS and Mainframe files comparison successfully and comparison result is Success
+2024-08-22 20:18:34.898010|22763|dat_bu_ec2_dev|INFO|Started binary to ascii conversion for input file : /mnt/efs/c18852e/new_backup_folder3/dataprep_run/run-22Aug2024_201710635462252/dataprep_mf_output/CXTT.FICH.CCSS.DBBAQL1.BT058024
+2024-08-22 20:18:34.906025|22763|dat_bu_ec2_dev|INFO|/usr/lib/jvm/java-17-amazon-corretto.x86_64/bin/java -jar /mnt/efs/c18852e/new_backup_folder3/dataprep_run/bin/dataprep-converters-runnable-2.75.0-RELEASE.jar FICHASCII /mnt/efs/c18852e/new_backup_folder3/dataprep_run/run-22Aug2024_201710635462252/dataprep_mf_output/CXTT.FICH.CCSS.DBBAQL1.BT058024 /mnt/efs/c18852e/new_backup_folder3/dataprep_run/run-22Aug2024_201710635462252/dataprep_mf_output/CXTT.FICH.CCSS.DBBAQL1.BT058024.txt
+2024-08-22 20:18:38.208120|22763|dat_bu_ec2_dev|INFO|Completed Binary to ascii conversion Input File : /mnt/efs/c18852e/new_backup_folder3/dataprep_run/run-22Aug2024_201710635462252/dataprep_mf_output/CXTT.FICH.CCSS.DBBAQL1.BT058024 Output File : /mnt/efs/c18852e/new_backup_folder3/dataprep_run/run-22Aug2024_201710635462252/dataprep_mf_output/CXTT.FICH.CCSS.DBBAQL1.BT058024.txt
+2024-08-22 20:18:38.215758|22763|dat_bu_ec2_dev|INFO|Started: Merging subcode files into respective 9 series report..
+2024-08-22 20:18:38.224021|22763|dat_bu_ec2_dev|INFO|Report: RPT009B
+2024-08-22 20:18:38.259325|22763|dat_bu_ec2_dev|INFO|FILENAME: 00980.txt
+2024-08-22 20:18:38.334198|22763|dat_bu_ec2_dev|INFO|Merged 00980.txt into RPT009B.txt
+2024-08-22 20:18:38.344430|22763|dat_bu_ec2_dev|INFO|FILENAME: 01300.txt
+2024-08-22 20:18:38.387259|22763|dat_bu_ec2_dev|INFO|Merged 01300.txt into RPT009B.txt
+2024-08-22 20:18:38.395764|22763|dat_bu_ec2_dev|INFO|FILENAME: 61110.txt
+2024-08-22 20:18:38.444975|22763|dat_bu_ec2_dev|INFO|Merged 61110.txt into RPT009B.txt
+2024-08-22 20:18:38.480626|22763|dat_bu_ec2_dev|INFO|Report: RPT009C
+2024-08-22 20:18:38.516258|22763|dat_bu_ec2_dev|INFO|FILENAME: 00980.txt
+2024-08-22 20:18:38.564787|22763|dat_bu_ec2_dev|INFO|Merged 00980.txt into RPT009C.txt
+2024-08-22 20:18:38.573746|22763|dat_bu_ec2_dev|INFO|FILENAME: 01300.txt
+2024-08-22 20:18:38.639008|22763|dat_bu_ec2_dev|INFO|Merged 01300.txt into RPT009C.txt
+2024-08-22 20:18:38.648638|22763|dat_bu_ec2_dev|INFO|FILENAME: 33333.txt
+2024-08-22 20:18:38.692317|22763|dat_bu_ec2_dev|INFO|Merged 33333.txt into RPT009C.txt
+2024-08-22 20:18:38.723475|22763|dat_bu_ec2_dev|INFO|Report: RPT009D
+2024-08-22 20:18:38.752077|22763|dat_bu_ec2_dev|INFO|FILENAME: 00928.txt
+2024-08-22 20:18:38.798090|22763|dat_bu_ec2_dev|INFO|Merged 00928.txt into RPT009D.txt
+2024-08-22 20:18:38.806658|22763|dat_bu_ec2_dev|INFO|FILENAME: 01300.txt
+2024-08-22 20:18:38.876222|22763|dat_bu_ec2_dev|INFO|Merged 01300.txt into RPT009D.txt
+2024-08-22 20:18:38.904574|22763|dat_bu_ec2_dev|INFO|Report: RPT009J
+2024-08-22 20:18:38.917091|22763|dat_bu_ec2_dev|INFO|RPT009J not present, deleting the empty directory
+2024-08-22 20:18:38.933999|22763|dat_bu_ec2_dev|INFO|Report: RPT009K
+2024-08-22 20:18:38.946662|22763|dat_bu_ec2_dev|INFO|RPT009K not present, deleting the empty directory
+2024-08-22 20:18:38.962578|22763|dat_bu_ec2_dev|INFO|End: Completed merging subcode files into respective 9 series report..
+2024-08-22 20:18:38.970701|22763|dat_bu_ec2_dev|INFO|Started: Merging all reports into FICH file..
+2024-08-22 20:18:38.979525|22763|dat_bu_ec2_dev|INFO|RPT001.txt is being merged
+2024-08-22 20:18:39.003655|22763|dat_bu_ec2_dev|INFO|RPT002A.txt is being merged
+2024-08-22 20:18:39.027105|22763|dat_bu_ec2_dev|INFO|RPT002B.txt is being merged
+2024-08-22 20:18:39.051852|22763|dat_bu_ec2_dev|INFO|RPT003A.txt is being merged
+2024-08-22 20:18:39.077121|22763|dat_bu_ec2_dev|INFO|RPT003B.txt is being merged
+2024-08-22 20:18:39.100105|22763|dat_bu_ec2_dev|INFO|RPT003C.txt is being merged
+2024-08-22 20:18:39.123228|22763|dat_bu_ec2_dev|INFO|RPT003D.txt is being merged
+2024-08-22 20:18:39.145536|22763|dat_bu_ec2_dev|INFO|RPT003F is not present
+2024-08-22 20:18:39.155107|22763|dat_bu_ec2_dev|INFO|RPT004A.txt is being merged
+2024-08-22 20:18:39.176778|22763|dat_bu_ec2_dev|INFO|RPT006.txt is being merged
+2024-08-22 20:18:39.199162|22763|dat_bu_ec2_dev|INFO|RPT009B.txt is being merged
+2024-08-22 20:18:39.236316|22763|dat_bu_ec2_dev|INFO|RPT009C.txt is being merged
+2024-08-22 20:18:39.264766|22763|dat_bu_ec2_dev|INFO|RPT009D.txt is being merged
+2024-08-22 20:18:39.305879|22763|dat_bu_ec2_dev|INFO|RPT009J is not present
+2024-08-22 20:18:39.315891|22763|dat_bu_ec2_dev|INFO|RPT009K is not present
+2024-08-22 20:18:39.326663|22763|dat_bu_ec2_dev|INFO|RPT011.txt is being merged
+2024-08-22 20:18:39.354821|22763|dat_bu_ec2_dev|INFO|End: Completed merging all reports into FICH file..
+2024-08-22 20:18:39.771740|22763|dat_bu_ec2_dev|INFO|Completed : Post Processing of data prep job
+2024-08-22 20:18:39.785351|22763|dat_bu_ec2_dev|INFO|Completed : Data prep Post Process job
+2024-08-22 20:18:39.794577|22763|dat_bu_ec2_dev|INFO|Completed : Data prep End to End Process job
